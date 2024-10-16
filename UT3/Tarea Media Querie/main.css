@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 .flex-column{
@@ -12,6 +13,7 @@
 .flex-row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 body{
@@ -26,21 +28,22 @@ main{
     gap: 2rem;
 
     width: 100%;
-    margin-top: 3rem;
+    margin: 3rem 0 3rem 0;
 }
 
 #container-cajas-contacto{
-    width: 65%;
+    justify-content: space-between;
     gap: 2rem;
+    width: 65%;
 }
 
 .cajas-contacto{
     align-items: center;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
 
     width: 12rem;
-    height: 10rem;
+    height: 12rem;
 
     background-color: white;
     padding: 1.5rem;
@@ -55,6 +58,7 @@ main{
     font-weight: bold;
 
     max-width: 70%;
+    margin-bottom: 0.5rem;
 }
 
 .cajas-contacto-description{
@@ -72,25 +76,37 @@ main{
 
 #container-cajas-form-ubi>div{
     width: 50%;
-    max-height: 25rem;
+    height: 25rem;
 }
 
 /* FORMULARIO */
 
 #caja-form{
+    justify-content: center;
+    align-items: flex-start;
     background-color: black;
     color: white;
     padding: 2rem;
 }
 
 form{
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 85%;
     gap: 2rem;
 }
 
 #formulario-title{
+    width: 100%;
     font-size: xx-large;
+    text-align: left;
 }
 
+#div-email-nombre{
+    width: 100%;
+}
 
 #div-email-nombre>div{
     gap: 1rem;
@@ -117,6 +133,10 @@ form{
     color: white;
 }
 
+#div-mensaje{
+    width: 100%;
+}
+
 textarea{
     height: 6rem;
 }
@@ -124,7 +144,7 @@ textarea{
 form>button{
     border: none;
     width: 100%;
-    height: 2rem;
+    padding: 0.5rem;
 
     background-color: white;
     color: black;
